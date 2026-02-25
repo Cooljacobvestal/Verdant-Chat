@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verdant Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar glass">
+        <header class="sidebar-header">
+          <div class="brand-mark">V</div>
+          <div>
+            <h1>Verdant</h1>
+            <p>Material You chat</p>
+          </div>
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+            <span class="material-symbols-rounded">dark_mode</span>
+          </button>
+        </header>
+
+        <div class="search-bar">
+          <span class="material-symbols-rounded">search</span>
+          <input type="text" placeholder="Search chats" />
+        </div>
+
+        <nav class="chat-list" aria-label="Conversations">
+          <button class="chat-item active">
+            <div class="avatar gradient">AL</div>
+            <div class="chat-meta">
+              <div class="line-1"><strong>Alex Lane</strong><span>2m</span></div>
+              <div class="line-2">Let's ship this UI 🔥</div>
+            </div>
+          </button>
+          <button class="chat-item">
+            <div class="avatar">MJ</div>
+            <div class="chat-meta">
+              <div class="line-1"><strong>Marketing</strong><span>10m</span></div>
+              <div class="line-2">Campaign launch moved to Friday.</div>
+            </div>
+          </button>
+          <button class="chat-item">
+            <div class="avatar">PR</div>
+            <div class="chat-meta">
+              <div class="line-1"><strong>Product Roadmap</strong><span>1h</span></div>
+              <div class="line-2">3 unread updates.</div>
+            </div>
+          </button>
+        </nav>
+
+        <footer class="sidebar-footer">
+          <button class="pill-btn"><span class="material-symbols-rounded">add</span>New chat</button>
+          <button class="pill-btn secondary"><span class="material-symbols-rounded">groups</span>Community</button>
+        </footer>
+      </aside>
+
+      <main class="chat-pane glass">
+        <header class="chat-header">
+          <div class="chat-user">
+            <div class="avatar gradient">AL</div>
+            <div>
+              <h2>Alex Lane</h2>
+              <p>Online · Typing…</p>
+            </div>
+          </div>
+          <div class="chat-actions">
+            <button class="icon-btn"><span class="material-symbols-rounded">videocam</span></button>
+            <button class="icon-btn"><span class="material-symbols-rounded">call</span></button>
+            <button class="icon-btn"><span class="material-symbols-rounded">more_vert</span></button>
+          </div>
+        </header>
+
+        <section class="messages" id="messages">
+          <article class="bubble incoming">
+            <p>I drafted the new onboarding flow. Want to review in 15?</p>
+            <time>11:22 AM</time>
+          </article>
+
+          <article class="bubble outgoing">
+            <p>Perfect. Let's align color + motion so it feels premium.</p>
+            <time>11:23 AM</time>
+          </article>
+
+          <article class="bubble incoming">
+            <p>Yep. I used Material You tonal surfaces and shared components.</p>
+            <div class="reactions">👏 2 &nbsp; 💚 1</div>
+            <time>11:25 AM</time>
+          </article>
+        </section>
+
+        <div class="quick-actions">
+          <button>#design</button>
+          <button>Share mock</button>
+          <button>Set reminder</button>
+          <button>AI summary</button>
+        </div>
+
+        <form class="composer" id="composer">
+          <button type="button" class="icon-btn"><span class="material-symbols-rounded">attach_file</span></button>
+          <input id="messageInput" type="text" placeholder="Message Alex" autocomplete="off" />
+          <button type="button" class="icon-btn"><span class="material-symbols-rounded">mood</span></button>
+          <button class="send-btn" type="submit"><span class="material-symbols-rounded">send</span></button>
+        </form>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
